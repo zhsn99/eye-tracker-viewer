@@ -161,3 +161,14 @@ cython_debug/
 # Ignore Excel files
 *.xlsx
 *.csv
+*.npy
+
+# ignore data folders in the eye-contact-viewr folder
+eye-contact-viewr/cur_data2/
+eye-contact-viewr/preprocessed/
+#ignore mp4 files 
+*.mp4
+#ignore pkl files
+*.pkl
+#ignore csv files
+*.csv
