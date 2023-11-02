@@ -9,7 +9,7 @@ import argparse
 def main():
     parser = argparse.ArgumentParser(description="Process or analyze raw data")
     
-    valid_actions = ["eye_contact_detection", "pupil_correlation", "your_processed_action","avg_pupil_correlation", "avg_eyes_correlation", "time_series_plot"]
+    valid_actions = ["eye_contact_detection", "pupil_correlation", "your_processed_action","avg_pupil_correlation", "avg_eyes_correlation", "time_series_plot", "one_eye_pupil_correlation", "all"]
     # Command-line arguments
     parser.add_argument("data_option", choices = ["-","raw", "processed", "conditions"], help = "Choose 'raw' , 'conditions' or 'processed'")
     parser.add_argument("action", choices = valid_actions, help = "Specify the action to perform")
