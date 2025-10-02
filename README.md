@@ -1,29 +1,113 @@
 
 
+# Eye-Tracker Data Visualization Tool
 
-# Setup
-Please use conda and setup your python env using the included environment.yaml
+A comprehensive interactive visualization tool for synchronized motion capture and eye-tracking data analysis, developed during my Master's thesis research.
 
-# PREPROCESSING
-You will have to convert the video/excel file before using this viewer.
-1) Place the raw data into the `raw_data` directory.
-2) Use `preprocess_motive.py <sequence_code>` to preprocess the data, it extracts some of the fields and converts the rotations, see the script for more details.
-3) Use `convert_json_motive.py <sequence_code>` to convert the data to json, which is read by the web based visualizer.
-4) Use `eye_contact_viewer.py <sequence_code>` to generate 2d images of gaze 3D and gaze origins.
-5) Use `crop_video.py <sequence_code>` to crop videos according to the syncronization time.
-5) Use `./extract_frames.sh <sequence_code>` extract the frames of the video into images.
+## 🎯 Why This Visualizer Was Essential
 
-After following these steps, all the data should be ready to run the visualization, check cure_data2 folder and see if all the data is avaible under the `<sequence_code>` folder.
+During my Master's research, I collected **over 12+ hours of data from 74 participants** using a synchronized motion capture and eye-tracking setup. This data was crucial for:
 
-# Visualizing
-Run `./serve.py`, which will run a local web server on port `8080`. 
-Open `localhost:8080` in a web browser to view the visualization.
+- **Developing diffusion-based generative models** for realistic eye movement simulation
+- **Designing a four-level evaluation framework** using behavioral gaze principles
 
-# Steps 
-1) Set the camera: `Viewer camera world transform` 
-2) Choose the order of Transformation, since we are using motive data choose `XYZ` order.
-3) Enter the `<sequence_code>` and press the `Load` button.
-4) Now, press the `Play capture` button.
-5) There are some other controling buttons like skiping or stoppins, you can use them as well.
-6) Click on the 3D visualuzation and move around using your touch pad or mouse, you can also use arrow keys to "walk" around the scene, Q and E to move up and down, click and drag to rotate the camera.
-I have also loaded a default `Viewer camera world transform` that move the camera to look at the participants in this example.
+### The Core Challenge
+
+One of the major challenges was ensuring that **data from different sources were perfectly synchronized** and transformed into a **unified coordinate system**. This was critical because:
+
+1. **Training Data Quality**: The data would later be used as training data for machine learning models
+2. **Research Collaboration**: Our PhD student in psychology needed a comprehensive interactive tool to explore the data and extract meaningful insights
+3. **Multi-Modal Integration**: We needed to synchronize:
+   - **OptiTrack motion capture** data (head movements in 3D space)
+   - **Tobii eye tracker glasses** (gaze data from both participants)
+   - **Mounted camera recordings** (first-person video perspectives)
+
+## 🎬 Demo
+
+### Video Demonstration
+Watch the full demo video: ![Demo GIF](docs/demo-video.gif)
+
+### Screenshots
+
+#### Main Visualization Interface
+![Main Interface](docs/Capture.PNG)
+*The complete visualization showing synchronized 3D motion capture data, eye-tracker feeds, and real-time analysis*
+
+#### Detailed Analysis View
+![Analysis View](docs/Capture_2.PNG)
+*Detailed view showing eye contact detection and participant interaction analysis*
+
+#### Control Panel
+![Control Panel](docs/Capture_3.PNG)
+*Interactive control panel with playback controls, camera manipulation, and real-time insights*
+
+## ✨ Key Features
+
+- **🔄 Real-time Synchronization**: Perfectly synchronized motion capture and eye-tracking data
+- **🎯 Eye Contact Detection**: Automatic detection and visualization of mutual gaze
+- **📊 Multi-Panel View**: Simultaneous display of 3D spatial data and first-person perspectives
+- **🎮 Interactive Controls**: Frame-by-frame navigation, camera manipulation, and data exploration
+- **📈 Behavioral Insights**: Real-time analysis of gaze patterns and social interactions
+- **🎨 3D Visualization**: Immersive 3D environment with participant avatars and gaze vectors
+
+## 🛠️ Technical Implementation
+
+The visualizer integrates multiple data streams:
+- **OptiTrack Motion Capture**: 3D head position and movement tracking
+- **Tobii Eye Trackers**: Dual eye-tracking glasses for both participants
+- **Synchronized Video**: First-person camera feeds from eye-tracker mounted cameras
+- **Unified Coordinate System**: All data transformed and aligned in 3D space
+
+## 🚀 Quick Start
+
+### Prerequisites
+```bash
+# Setup conda environment
+conda env create -f environment.yaml
+conda activate eye-tracker-viewer
+```
+
+### Data Preprocessing
+1. Place raw data in the `raw_data` directory
+2. Run preprocessing pipeline:
+```bash
+python preprocess_motive.py <sequence_code>
+python convert_json_motive.py <sequence_code>
+python eye_contact_viewer.py <sequence_code>
+python crop_video.py <sequence_code>
+./extract_frames.sh <sequence_code>
+```
+
+### Launch Visualization
+```bash
+python serve.py
+```
+Open `localhost:8080` in your web browser
+
+## 📋 Usage Instructions
+
+1. **Set Camera Position**: Configure `Viewer camera world transform`
+2. **Choose Transformation Order**: Select `XYZ` for Motive data
+3. **Load Data**: Enter `<sequence_code>` and press `Load`
+4. **Start Playback**: Press `Play capture` to begin visualization
+5. **Navigate**: Use mouse/touchpad to orbit, arrow keys to walk, Q/E to move up/down
+
+## 🔬 Research Applications
+
+This tool was specifically designed for:
+- **Psychology Research**: Analyzing social interactions and gaze patterns
+- **Machine Learning**: Generating high-quality training data for eye movement models
+- **Behavioral Analysis**: Understanding human attention and communication patterns
+- **Data Validation**: Ensuring data quality and synchronization accuracy
+
+## 📊 Data Collection Scale
+
+- **74 participants** across multiple sessions
+- **12+ hours** of synchronized data collection
+- **Dual eye-tracker setup** (Tobii glasses for each participant)
+- **OptiTrack motion capture** for precise 3D positioning
+- **Multi-camera setup** for comprehensive perspective coverage
+
+---
+
+*This visualization tool was developed as part of my Master's thesis research on eye movement simulation and behavioral analysis.*
