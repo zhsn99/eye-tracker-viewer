@@ -4,6 +4,17 @@
 
 A comprehensive interactive visualization tool for synchronized motion capture and eye-tracking data analysis, developed during my Master's thesis research.
 
+## Data Collection Conditions
+
+The preprocessing pipeline depends on the specific data collection condition, as we conducted experiments across multiple scenarios:
+
+- **Face-to-Face**: Traditional in-person conversations for baseline eye contact behavior
+- **Window Condition**: Participants separated by a window (mimicking iPad size) to study how screen size affects eye contact behavior
+- **Zoom Calls**: Remote video conferencing to analyze digital communication patterns
+- **Avatar-Based App**: Newer version for psychology students studying conversation dynamics in virtual environments
+
+Each condition requires different coordinate transformations and data processing approaches, which is why we have multiple preprocessing scripts (`preprocess.py`, `preprocess_f2f.py`, etc.) tailored to handle the specific requirements of each experimental setup.
+
 ## 🎯 Why This Visualizer Was Essential
 
 During my Master's research, I collected **over 12+ hours of data from 74 participants** using a synchronized motion capture and eye-tracking setup. This data was crucial for:
