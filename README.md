@@ -41,16 +41,16 @@ Watch the full demo video: ![Demo GIF](docs/demo-video.gif)
 ![Control Panel](docs/Capture_3.PNG)
 *Interactive control panel with playback controls, camera manipulation, and real-time insights*
 
-## ✨ Key Features
+##  Key Features
 
-- **🔄 Real-time Synchronization**: Perfectly synchronized motion capture and eye-tracking data
-- **🎯 Eye Contact Detection**: Automatic detection and visualization of mutual gaze
-- **📊 Multi-Panel View**: Simultaneous display of 3D spatial data and first-person perspectives
-- **🎮 Interactive Controls**: Frame-by-frame navigation, camera manipulation, and data exploration
-- **📈 Behavioral Insights**: Real-time analysis of gaze patterns and social interactions
-- **🎨 3D Visualization**: Immersive 3D environment with participant avatars and gaze vectors
+- ** Real-time Synchronization**: Perfectly synchronized motion capture and eye-tracking data
+- ** Eye Contact Detection**: Automatic detection and visualization of mutual gaze
+- ** Multi-Panel View**: Simultaneous display of 3D spatial data and first-person perspectives
+- ** Interactive Controls**: Frame-by-frame navigation, camera manipulation, and data exploration
+- ** Behavioral Insights**: Real-time analysis of gaze patterns and social interactions
+- ** 3D Visualization**: Immersive 3D environment with participant avatars and gaze vectors
 
-## 🛠️ Technical Implementation
+##  Technical Implementation
 
 The visualizer integrates multiple data streams:
 - **OptiTrack Motion Capture**: 3D head position and movement tracking
@@ -58,7 +58,7 @@ The visualizer integrates multiple data streams:
 - **Synchronized Video**: First-person camera feeds from eye-tracker mounted cameras
 - **Unified Coordinate System**: All data transformed and aligned in 3D space
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 ```bash
@@ -84,7 +84,7 @@ python serve.py
 ```
 Open `localhost:8080` in your web browser
 
-## 📋 Usage Instructions
+## Usage Instructions
 
 1. **Set Camera Position**: Configure `Viewer camera world transform`
 2. **Choose Transformation Order**: Select `XYZ` for Motive data
@@ -92,15 +92,14 @@ Open `localhost:8080` in your web browser
 4. **Start Playback**: Press `Play capture` to begin visualization
 5. **Navigate**: Use mouse/touchpad to orbit, arrow keys to walk, Q/E to move up/down
 
-## 🔬 Research Applications
+## Research Applications
 
 This tool was specifically designed for:
-- **Psychology Research**: Analyzing social interactions and gaze patterns
-- **Machine Learning**: Generating high-quality training data for eye movement models
-- **Behavioral Analysis**: Understanding human attention and communication patterns
 - **Data Validation**: Ensuring data quality and synchronization accuracy
+- **Psychology Research**: Analyzing social interactions and gaze patterns
+- **Behavioral Analysis**: Understanding human attention and communication patterns
 
-## 📊 Data Collection Scale
+## Data Collection Scale
 
 - **74 participants** across multiple sessions
 - **12+ hours** of synchronized data collection
