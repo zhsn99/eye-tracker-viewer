@@ -22,33 +22,43 @@ One of the major challenges was ensuring that **data from different sources were
    - **Tobii eye tracker glasses** (gaze data from both participants)
    - **Mounted camera recordings** (first-person video perspectives)
 
-## 🎬 Demo
+## Demo
 
 ### Video Demonstration
 Watch the full demo video: ![Demo GIF](docs/demo-video.gif)
 
 ### Screenshots
 
-#### Main Visualization Interface
-![Main Interface](docs/Capture.PNG)
-*The complete visualization showing synchronized 3D motion capture data, eye-tracker feeds, and real-time analysis*
-
-#### Detailed Analysis View
-![Analysis View](docs/Capture_2.PNG)
-*Detailed view showing eye contact detection and participant interaction analysis*
-
-#### Control Panel
-![Control Panel](docs/Capture_3.PNG)
-*Interactive control panel with playback controls, camera manipulation, and real-time insights*
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="docs/Capture.PNG" width="300" alt="Main Interface"/>
+        <br><b>Main Visualization Interface</b>
+        <br><i>Complete visualization showing synchronized 3D motion capture data, eye-tracker feeds, and real-time analysis</i>
+      </td>
+      <td align="center">
+        <img src="docs/Capture_2.PNG" width="300" alt="Analysis View"/>
+        <br><b>Detailed Analysis View</b>
+        <br><i>Detailed view showing eye contact detection and participant interaction analysis</i>
+      </td>
+      <td align="center">
+        <img src="docs/Capture_3.PNG" width="300" alt="Control Panel"/>
+        <br><b>Control Panel</b>
+        <br><i>Interactive control panel with playback controls, camera manipulation, and real-time insights</i>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ##  Key Features
 
-- ** Real-time Synchronization**: Perfectly synchronized motion capture and eye-tracking data
-- ** Eye Contact Detection**: Automatic detection and visualization of mutual gaze
-- ** Multi-Panel View**: Simultaneous display of 3D spatial data and first-person perspectives
-- ** Interactive Controls**: Frame-by-frame navigation, camera manipulation, and data exploration
-- ** Behavioral Insights**: Real-time analysis of gaze patterns and social interactions
-- ** 3D Visualization**: Immersive 3D environment with participant avatars and gaze vectors
+- **Real-time Synchronization**: Perfectly synchronized motion capture and eye-tracking data
+- **Eye Contact Detection**: Automatic detection and visualization of mutual gaze
+- **Multi-Panel View**: Simultaneous display of 3D spatial data and first-person perspectives
+- **Interactive Controls**: Frame-by-frame navigation, camera manipulation, and data exploration
+- **Behavioral Insights**: Real-time analysis of gaze patterns and social interactions
+- **3D Visualization**: Immersive 3D environment with participant avatars and gaze vectors
 
 ##  Technical Implementation
 
